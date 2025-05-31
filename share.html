@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分享 - 台灣127寄養橋樑協會</title>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="components/theme.css">
+    <style>
+        /* Page specific styles */
+        .featured-story {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 4rem;
+        }
+        
+        .story-image {
+            background: #e0e0e0;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #666;
+            padding: 1rem;
+            border-left: 4px solid #00bcd4;
+            margin: 1rem 0;
+        }
+        
+        .story-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .story-card-image {
+            height: 200px;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .story-card-content {
+            padding: 1.5rem;
+        }
+        
+        .story-category {
+            color: #00bcd4;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .read-more {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            transition: gap 0.3s;
+        }
+        
+        .read-more:hover {
+            gap: 1rem;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .share-form {
+            background: linear-gradient(135deg, #00bcd4 0%, #008ba3 100%);
+            color: white;
+            padding: 60px 5%;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .share-form h2 {
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>    <!-- Header -->
+    <header></header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>愛的故事</h1>
+        <p>見證分享 - 每個故事都是愛的延續</p>
+    </section>
+
+    <!-- Stories Section -->
+    <section class="stories-section">
+        <!-- Featured Story -->
+        <div class="featured-story">
+            <h2>高雄某中學生的寄養故事</h2>
+            <div class="featured-content">
+                <div class="story-image">[學生照片]</div>
+                <div class="story-text">
+                    <p>「在寄養家庭的日子，改變了我的一生。」小明（化名）回憶起在寄養家庭的生活，眼中充滿感激。</p>
+                    <div class="quote">
+                        "寄養爸媽不只給了我一個家，更教會我什麼是愛。他們的接納和支持，讓我相信自己值得被愛，也有能力去愛別人。"
+                    </div>
+                    <p>從一個缺乏安全感的孩子，到現在能夠自信地追求夢想，小明的轉變見證了寄養家庭的力量。他現在不僅學業優異，更積極參與社區服務，希望將這份愛傳遞下去。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Stories -->
+        <h2 style="text-align: center; color: #e74c3c; margin-bottom: 3rem;">更多見證故事</h2>
+        
+        <div class="stories-grid">
+            <div class="story-card">
+                <div class="story-card-image">[家庭照片]</div>
+                <div class="story-card-content">
+                    <div class="story-category">寄養家庭見證</div>
+                    <h3>張家的寄養之旅</h3>
+                    <p>「起初我們很擔心自己做不好，但當看到孩子臉上的笑容，一切都值得了。」張媽媽分享他們成為寄養家庭的心路歷程...</p>
+                    <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-card-image">[教會照片]</div>
+                <div class="story-card-content">
+                    <div class="story-category">教會支持見證</div>
+                    <h3>恩典教會的支持網絡</h3>
+                    <p>「整個教會成為我們的後盾！」看恩典教會如何動員會友，為寄養家庭提供全方位的支持...</p>
+                    <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-card-image">[孩子照片]</div>
+                <div class="story-card-content">
+                    <div class="story-category">孩子的心聲</div>
+                    <h3>小華的感恩日記</h3>
+                    <p>「謝謝寄養媽媽每天為我準備便當，讓我在學校也能感受到家的溫暖。」8歲的小華用稚嫩的文字，記錄下生活中的點點滴滴...</p>
+                    <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-card-image">[支持者照片]</div>
+                <div class="story-card-content">
+                    <div class="story-category">支持者見證</div>
+                    <h3>愛的陪伴者</h3>
+                    <p>「雖然我們不是寄養家庭，但能夠成為他們的支持者，一起走這段路，是我們的榮幸。」李弟兄分享如何實際支持寄養家庭...</p>
+                    <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-card-image">[社工照片]</div>
+                <div class="story-card-content">
+                    <div class="story-category">社工分享</div>
+                    <h3>守護天使的觀察</h3>
+                    <p>「看著孩子在寄養家庭中重新綻放笑容，是我工作中最大的成就感。」資深社工分享多年來的觀察與感動...</p>
+                    <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="story-card">
+                <div class="story-card-image">[活動照片]</div>
+                <div class="story-card-content">
+                    <div class="story-category">活動花絮</div>
+                    <h3>2024寄養家庭日</h3>
+                    <p>一年一度的寄養家庭日，讓所有寄養家庭齊聚一堂，分享彼此的故事，互相鼓勵支持...</p>
+                    <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="photo-gallery">
+            <h2>相片牆</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">[活動照片1]</div>
+                <div class="gallery-item">[活動照片2]</div>
+                <div class="gallery-item">[活動照片3]</div>
+                <div class="gallery-item">[活動照片4]</div>
+                <div class="gallery-item">[活動照片5]</div>
+                <div class="gallery-item">[活動照片6]</div>
+            </div>
+        </div>
+
+        <!-- Share Your Story Form -->
+        <div class="share-form">
+            <h2>分享您的故事</h2>
+            <p>您的經歷可能成為他人的祝福，歡迎與我們分享您的寄養故事</p>
+            <br>
+            <form class="form-container">
+                <div class="form-group" style="text-align: left;">
+                    <label for="name">您的姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group" style="text-align: left;">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group" style="text-align: left;">
+                    <label for="phone">聯絡電話</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group" style="text-align: left;">
+                    <label for="story-type">故事類型</label>
+                    <select id="story-type" name="story-type" required>
+                        <option value="">請選擇</option>
+                        <option value="foster-family">寄養家庭見證</option>
+                        <option value="foster-child">寄養孩子見證</option>
+                        <option value="supporter">支持者見證</option>
+                        <option value="church">教會見證</option>
+                        <option value="other">其他</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" style="text-align: left;">
+                    <label for="story">您的故事</label>
+                    <textarea id="story" name="story" placeholder="請分享您的寄養經歷、感動時刻或想對其他人說的話..." required></textarea>
+                </div>
+                
+                <div class="form-group" style="text-align: left;">
+                    <label for="permission">
+                        <input type="checkbox" id="permission" name="permission" required>
+                        我同意台灣127寄養橋樑協會使用我的故事作為見證分享（可選擇匿名）
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-button">提交故事</button>
+            </form>
+        </div>
+    </section>    <!-- Footer -->
+    <footer></footer>
+
+    <script src="components/components.js"></script>
+</body>
+</html>

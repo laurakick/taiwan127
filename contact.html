@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>聯繫人 - 台灣127寄養橋樑協會</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="components/theme.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header and Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00bcd4;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, #00bcd4 0%, #008ba3 100%);
+            color: white;
+            padding: 120px 5% 60px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Content */
+        .contact-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-details {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-details h2 {
+            color: #00bcd4;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item i {
+            color: #00bcd4;
+            font-size: 1.5rem;
+            width: 30px;
+            margin-top: 0.3rem;
+        }
+        
+        .contact-item-content h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* History Section */
+        .history-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .history-section h2 {
+            color: #00bcd4;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #00bcd4;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #00bcd4;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #00bcd4;
+        }
+        
+        .timeline-date {
+            color: #00bcd4;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Form */
+        .contact-form-section {
+            background: #f8f9fa;
+            padding: 3rem;
+            border-radius: 10px;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-form-section h2 {
+            color: #00bcd4;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00bcd4;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: #00bcd4;
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .submit-button:hover {
+            background: #008ba3;
+        }
+        
+        /* Map Section */
+        .map-section {
+            margin-bottom: 4rem;
+        }
+        
+        .map-section h2 {
+            text-align: center;
+            color: #00bcd4;
+            margin-bottom: 2rem;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .faq-section h2 {
+            color: #00bcd4;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .faq-question i {
+            color: #00bcd4;
+        }
+        
+        .faq-answer {
+            color: #666;
+            padding-left: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #00bcd4;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>    <!-- Header -->
+    <header></header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>聯繫我們</h1>
+        <p>我們期待聽到您的聲音</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-grid">
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h2>聯絡資訊</h2>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-item-content">
+                        <h4>協會地址</h4>
+                        <p>11065 台北市信義區基隆路一段155號</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="contact-item-content">
+                        <h4>聯絡電話</h4>
+                        <p>電話：(02) 2764-3311<br>
+                        傳真：(02) 2764-3312</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-item-content">
+                        <h4>電子郵件</h4>
+                        <p>一般諮詢：info@taiwan127.net<br>
+                        寄養申請：foster@taiwan127.net<br>
+                        教會合作：church@taiwan127.net</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div class="contact-item-content">
+                        <h4>服務時間</h4>
+                        <p>週一至週五：9:00 AM - 5:00 PM<br>
+                        週六、週日及國定假日休息</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-share-alt"></i>
+                    <div class="contact-item-content">
+                        <h4>社群媒體</h4>
+                        <p>Facebook: @Taiwan127Foster<br>
+                        Instagram: @taiwan127_foster<br>
+                        YouTube: 台灣127寄養橋樑協會</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <h2>協會沿革</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2019年9月</div>
+                        <p>作為內地會OMF駐台事工起步，開始推動寄養家庭事工，探索台灣寄養需求。</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020年-2021年</div>
+                        <p>與各地教會合作，舉辦寄養家庭說明會，培訓第一批寄養家庭支持者。</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022年6月25日</div>
+                        <p>正式完成內政部立案，成立「台灣127寄養橋樑協會」，開展更廣泛的服務。</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023年至今</div>
+                        <p>持續擴展服務，與更多教會建立合作關係，支持更多寄養家庭。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+            <h2>聯絡表單</h2>
+            <form>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">姓名 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">聯絡電話</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">主旨</label>
+                        <select id="subject" name="subject">
+                            <option value="">請選擇主旨</option>
+                            <option value="general">一般諮詢</option>
+                            <option value="foster">寄養家庭申請</option>
+                            <option value="church">教會合作</option>
+                            <option value="volunteer">志工服務</option>
+                            <option value="donation">捐款事宜</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">訊息內容 *</label>
+                    <textarea id="message" name="message" placeholder="請輸入您的訊息..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">送出訊息</button>
+            </form>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-section">
+            <h2>協會位置</h2>
+            <div class="map-container">
+                [Google Maps - 台北市信義區基隆路一段155號]
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>常見問題</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    如何成為寄養家庭？
+                </div>
+                <div class="faq-answer">
+                    成為寄養家庭需要經過申請、評估、培訓等程序。您可以先填寫聯絡表單或直接致電我們，我們會安排專人為您說明詳細流程。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    教會如何參與寄養事工？
+                </div>
+                <div class="faq-answer">
+                    教會可以透過動員會友成為寄養家庭或支持者、舉辦相關講座、提供資源等方式參與。我們提供完整的教會合作方案，歡迎聯繫洽談。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    如何捐款支持協會？
+                </div>
+                <div class="faq-answer">
+                    您可以透過銀行轉帳、郵政劃撥或線上捐款等方式支持我們。詳細捐款資訊請來電或來信詢問，我們會提供完整說明。
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-question-circle"></i>
+                    協會提供哪些資源？
+                </div>
+                <div class="faq-answer">
+                    我們提供寄養家庭培訓課程、支持團體、教會資源包、相關書籍和影音資料等。您可以到「資源列表」頁面查看更多詳情。
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Footer -->
+    <footer></footer>
+
+    <script src="components/components.js"></script>
+</body>
+</html>
