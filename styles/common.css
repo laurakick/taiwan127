@@ -26,6 +26,15 @@ FONT SIZE SYSTEM:
 Uses a consistent scale from --font-size-xs (0.8rem) to --font-size-4xl (3rem)
 */
 
+/* Font Face Declaration */
+@font-face {
+    font-family: 'Iansui';
+    src: url('../font/iansui/Iansui-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* CSS Custom Properties (Variables) for Easy Customization */
 :root {
     /* Font Families */
@@ -146,7 +155,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     line-height: var(--line-height-normal);
-    font-family: var(--font-chinese);
+    font-family: 'Iansui', var(--font-chinese);
 }
 
 .quote-reference {
