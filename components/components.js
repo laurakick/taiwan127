@@ -42,12 +42,23 @@ async function loadComponent(selector, componentPath) {
     }
 }
 
+// Initialize Hamburger Menu for mobile
+function initializeHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    if (!hamburger || !navLinks) return;
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+}
+
 // Initialize components when DOM is loaded
 document.addEventListener('DOMContentLoaded', async function() {
     // Load header and footer components
+    await loadComponent('header-float', 'components/header-float.html');
     await loadComponent('header', 'components/header.html');
+    // set position of header to static
     await loadComponent('footer', 'components/footer.html');
-    
-    // Initialize theme after components are loaded
-    setTimeout(initializeTheme, 100);
+    initializeTheme();
+    initializeHamburgerMenu();
 });

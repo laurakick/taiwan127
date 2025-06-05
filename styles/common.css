@@ -15,19 +15,29 @@ body {
 header {
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     z-index: 1000;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.header-placeholder {
+    position:static;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0px 5%;
     max-width: 1200px;
     margin: 0 auto;
+
+    margin-top: 0px;
+    margin-bottom: 0px;    
 }
 
 .logo {
@@ -38,10 +48,10 @@ nav {
 }
 
 .logo-image {
-    height: 40px;
+    /* height: 40px; */
     width: auto;
     object-fit: contain;
-    max-width: 100%;
+    max-width: 17rem;
 }
 
 .logo-text {
@@ -95,7 +105,7 @@ nav {
 .page-header {
     background: linear-gradient(135deg, #00bcd4 0%, #008ba3 100%);
     color: white;
-    padding: 140px 5% 60px;
+    padding: 40px 5% 60px;
     text-align: center;
 }
 
@@ -311,19 +321,61 @@ footer {
     color: #00bcd4;
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 1100;
+}
+.hamburger span {
+    height: 10px;
+    width: 100%;
+    background: #00bcd4;
+    /* background: red; */
+    margin: 3px 0;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: #fff;
+        flex-direction: column;
+        width: 180px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        border-radius: 8px;
+        padding: 1rem 0 1rem 1.5rem;
+        gap: 1.2rem;
+        z-index: 1050;
+        align-items: flex-start;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    nav {
+        position: relative;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
     .logo {
         gap: 0.3rem;
     }
     
     .logo-image {
-        height: 30px;
-        max-width: 100%;
+        /* height: 30px; */
+        max-width: 15rem;
     }
     
     .logo-text {

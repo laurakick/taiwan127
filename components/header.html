@@ -1,9 +1,14 @@
 <!-- Header Component -->
 <header>
-    <nav>
+    <nav class="navvbar">
         <div class="logo">
             <img src="TW127_logo.png" alt="台灣127寄養橋樑協會 Logo" class="logo-image">
-            <span class="logo-text">台灣127寄養橋樑協會</span>
+            <span style="display:none" class="logo-text">台灣127寄養橋樑協會</span>
+        </div>
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">首頁</a></li>
@@ -13,7 +18,7 @@
             <li><a href="share.html">分享</a></li>
             <li><a href="contact.html">聯繫人</a></li>
         </ul>
-        <button class="theme-switch" id="themeSwitch" aria-label="切換主題">
+        <button style="display:none" class="theme-switch" id="themeSwitch" aria-label="切換主題">
             <i class="fas fa-sun"></i>
             <span style="font-size:0.95em;">亮/暗</span>
         </button>
