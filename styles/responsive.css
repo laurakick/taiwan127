@@ -1,0 +1,78 @@
+/*
+============================================================================
+Responsive Design - Media Queries and Mobile Styles
+============================================================================
+*/
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: var(--color-background);
+        flex-direction: column;
+        width: 180px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        border-radius: 8px;
+        padding: 1rem 0 1rem 1.5rem;
+        gap: 1.2rem;
+        z-index: 1050;
+        align-items: flex-start;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    nav {
+        position: relative;
+    }
+}
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    .logo {
+        gap: 0.3rem;
+    }
+    
+    .logo-image {
+        /* height: 30px; */
+        max-width: 15rem;
+    }
+    
+    .logo-text {
+        font-size: var(--font-size-lg);
+        text-align: center;
+        width: 100%;
+    }
+    
+    .biblical-quote {
+        padding: 0.4rem 3%;
+    }
+    
+    .biblical-quote p {
+        font-size: var(--font-size-xs);
+        line-height: var(--line-height-tight);
+    }
+    
+    .hero h1,
+    .page-header h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .grid-2,
+    .grid-3,
+    .grid-auto {
+        grid-template-columns: 1fr;
+    }
+    
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+}

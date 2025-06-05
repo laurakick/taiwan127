@@ -1,0 +1,19 @@
+/*
+============================================================================
+Base Styles - Reset and Core Body Styles
+============================================================================
+*/
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+}

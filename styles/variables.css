@@ -1,0 +1,66 @@
+/*
+============================================================================
+Taiwan 127 Foster Care Bridge Association - CSS Variables
+============================================================================
+
+FONT CUSTOMIZATION GUIDE:
+To change fonts across the entire website, modify the CSS variables below:
+
+1. --font-primary: Main font used for body text and most UI elements
+2. --font-chinese: Optimized font for Chinese text (navigation, quotes, paragraphs)
+3. --font-english: Optimized font for English text
+4. --font-display: Font used for headings and display text
+
+EXAMPLES:
+- To use a custom uploaded font: '--font-primary: "YourCustomFont", "Microsoft JhengHei", Arial, sans-serif;'
+- To use Google Fonts: First add the font link in HTML, then update the variable
+- To use system fonts only: '--font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;'
+
+COLOR CUSTOMIZATION:
+- --color-primary: Main brand color (currently teal #00b4cc)
+- --color-primary-dark: Darker variant for hover states
+- --color-text: Main text color
+- --color-text-light: Lighter text color for secondary content
+
+FONT SIZE SYSTEM:
+Uses a consistent scale from --font-size-xs (0.8rem) to --font-size-4xl (3rem)
+*/
+
+/* CSS Custom Properties (Variables) for Easy Customization */
+:root {
+    /* Font Families */
+    --font-primary: 'Roboto', 'Microsoft JhengHei', Arial, sans-serif;
+    --font-chinese: 'Microsoft JhengHei', 'PingFang TC', 'Noto Sans TC', sans-serif;
+    --font-english: 'Roboto', 'Open Sans', Arial, sans-serif;
+    --font-display: 'Roboto', 'Microsoft JhengHei', Arial, sans-serif; /* For headings */
+    
+    /* Font Sizes */
+    --font-size-xs: 0.8rem;
+    --font-size-sm: 0.9rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+    --font-size-4xl: 3rem;
+    
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Line Heights */
+    --line-height-tight: 1.3;
+    --line-height-normal: 1.4;
+    --line-height-relaxed: 1.6;
+    
+    /* Colors - Vibrant Theme */
+    --color-primary: #00b4cc;
+    --color-primary-dark: #008fa3;
+    --color-text: #333;
+    --color-text-light: #555;
+    --color-text-lighter: #888;
+    --color-background: #fff;
+    --color-background-light: #f5f7fa;
+}

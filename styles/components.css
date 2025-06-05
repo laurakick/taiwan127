@@ -1,0 +1,192 @@
+/*
+============================================================================
+Reusable Components - Buttons, Cards, Forms, Icons
+============================================================================
+*/
+
+/* Page Headers */
+.page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 50px 5% 60px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: var(--font-size-lg);
+    font-family: var(--font-chinese);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 70px 5% 80px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: var(--font-size-lg);
+    font-family: var(--font-chinese);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    transition: transform 0.3s;
+    margin: 0 10px;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.action-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.action-button:hover {
+    background: var(--color-primary-dark);
+}
+
+.submit-button {
+    background: var(--color-primary);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: var(--color-primary-dark);
+}
+
+/* Cards */
+.card {
+    background: var(--color-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icons */
+.icon-large {
+    font-size: var(--font-size-4xl);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.icon-medium {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-primary);
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+    font-family: var(--font-primary);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: var(--font-size-xl);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
