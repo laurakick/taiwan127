@@ -183,7 +183,7 @@ nav {
 .page-header {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     color: white;
-    padding: 40px 5% 60px;
+    padding: 50px 5% 60px;
     text-align: center;
 }
 
