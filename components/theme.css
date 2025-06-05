@@ -32,7 +32,7 @@ body.dark-theme footer {
 }
 
 /* Navigation styles for dark theme */
-body.dark-theme .logo {
+body.dark-theme .logo-text {
     color: #e0e0e0;
 }
 
@@ -41,6 +41,19 @@ body.dark-theme .nav-links a {
 }
 
 body.dark-theme .nav-links a:hover {
+    color: #e67e22;
+}
+
+body.dark-theme .biblical-quote {
+    background: rgba(230, 126, 34, 0.05);
+    border-bottom-color: rgba(230, 126, 34, 0.1);
+}
+
+body.dark-theme .biblical-quote p {
+    color: #bbb;
+}
+
+body.dark-theme .quote-reference {
     color: #e67e22;
 }
 
