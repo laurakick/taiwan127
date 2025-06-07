@@ -63,7 +63,7 @@ nav {
 
 .biblical-quote p {
     margin: 0;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xl);
     color: var(--color-text-light);
     font-style: italic;
     max-width: 1200px;
