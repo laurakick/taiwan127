@@ -8,18 +8,18 @@ Responsive Design - Media Queries and Mobile Styles
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-    }
-      .nav-links {
+    }      .nav-links {
         display: none;
         position: absolute;
         top: 70px;
         right: 5%;
         background: var(--color-background);
         flex-direction: column;
-        width: 180px;
+        width: max-content;
+        min-width: 120px;
         box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         border-radius: 8px;
-        padding: 1rem 0 1rem 1.5rem;
+        padding: 1rem 1.5rem;
         gap: 1.2rem;
         z-index: 1100;
         align-items: flex-start;
