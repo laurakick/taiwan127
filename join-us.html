@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加入我們 - 台灣127寄養橋樑協會</title>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>加入我們 - 台灣127寄養橋樑協會</title>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="components/theme.css">
     <style>
         /* Page specific styles */
         .join-card {
-            background: #f8f9fa;
+            background: var(--color-background-light);
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, border-color 0.3s;
             border: 2px solid transparent;
         }
         
         .join-card:hover {
             transform: translateY(-5px);
-            border-color: #00bcd4;
+            border-color: var(--color-primary);
         }
+        
+
     </style>
 </head>
 <body>    <!-- Header -->
