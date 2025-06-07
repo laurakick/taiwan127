@@ -38,3 +38,23 @@ For legacy support, all styles are imported below to maintain compatibility.
 @import url('./components.css');
 @import url('./layout.css');
 @import url('./responsive.css');
+
+/* Hero Section */
+.hero {
+    /* ...existing code... */
+}
+
+.hero h1 {
+    /* ...existing code... */
+}
+
+.hero h2 {
+    color: white;
+    font-size: var(--font-size-3xl);
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    color: white;
+    /* ...existing code... */
+}
