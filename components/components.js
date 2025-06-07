@@ -44,12 +44,29 @@ async function loadComponent(selector, componentPath) {
 
 // Initialize Hamburger Menu for mobile
 function initializeHamburgerMenu() {
-    const hamburger = document.getElementById('hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    if (!hamburger || !navLinks) return;
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
+    // Wait a bit for components to be fully loaded
+    setTimeout(() => {
+        // Handle both static and floating header hamburger menus
+        const hamburgerStatic = document.getElementById('hamburger-menu');
+        const hamburgerFloat = document.getElementById('hamburger-menu-float');
+        
+        // Get all nav-links elements
+        const allNavLinks = document.querySelectorAll('.nav-links');
+        
+        // Initialize static header hamburger menu (first nav-links)
+        if (hamburgerStatic && allNavLinks[0]) {
+            hamburgerStatic.addEventListener('click', function() {
+                allNavLinks[0].classList.toggle('active');
+            });
+        }
+        
+        // Initialize floating header hamburger menu (second nav-links)
+        if (hamburgerFloat && allNavLinks[1]) {
+            hamburgerFloat.addEventListener('click', function() {
+                allNavLinks[1].classList.toggle('active');
+            });
+        }
+    }, 100);
 }
 
 // Initialize components when DOM is loaded
