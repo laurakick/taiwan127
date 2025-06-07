@@ -47,18 +47,12 @@ function initializeHamburgerMenu() {
     // Wait a bit for components to be fully loaded
     setTimeout(() => {
         // Handle both static and floating header hamburger menus
-        const hamburgerStatic = document.getElementById('hamburger-menu');
         const hamburgerFloat = document.getElementById('hamburger-menu-float');
         
         // Get all nav-links elements
         const allNavLinks = document.querySelectorAll('.nav-links');
         
-        // Initialize static header hamburger menu (first nav-links)
-        if (hamburgerStatic && allNavLinks[0]) {
-            hamburgerStatic.addEventListener('click', function() {
-                allNavLinks[0].classList.toggle('active');
-            });
-        }
+
         
         // Initialize floating header hamburger menu (second nav-links)
         if (hamburgerFloat && allNavLinks[1]) {
