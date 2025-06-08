@@ -44,6 +44,8 @@ Uses a consistent scale from --font-size-xs (0.8rem) to --font-size-4xl (3rem)
     --font-size-3xl: 2.5rem;
     --font-size-4xl: 3rem;
     
+    --test-var:100px;
+
     /* Font Weights */
     --font-weight-normal: 400;
     --font-weight-medium: 500;
