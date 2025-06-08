@@ -15,8 +15,10 @@ body {
     font-family: var(--font-primary);
     line-height: var(--line-height-relaxed);
     color: var(--color-text);
-    background: var(--color-background);
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-background-light) 50%, #ffffff 100%);
+    background-attachment: fixed;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 /* Container System */
