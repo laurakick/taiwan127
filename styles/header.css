@@ -7,13 +7,13 @@ Header and Navigation Styles
 /* Header and Navigation */
 header {
     background: var(--color-background);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    /* position: fixed; */
+    box-shadow: 0 1px 3px var(--color-shadow);
     width: 100%;
     top: 0;
     z-index: 1000;
     margin-top: 0px;
     margin-bottom: 0px;
+    border-bottom: 1px solid var(--color-border);
 }
 
 /* Fixed header specific styles */
@@ -23,8 +23,9 @@ header[style*="position:fixed"] {
     top: 0;
     left: 0;
     z-index: 1000;
-    background: var(--color-background);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 10px var(--color-shadow);
 }
 
 .header-placeholder {
@@ -35,79 +36,107 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 5%;
-    max-width: 1200px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    max-width: var(--container-xl);
     margin: 0 auto;
-    margin-top: 0px;
-    margin-bottom: 0px;    
 }
 
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
 }
 
 .logo-image {
-    /* height: 40px; */
     width: auto;
+    height: 50px;
     object-fit: contain;
-    max-width: 17rem;
 }
 
 .logo-text {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
     color: var(--color-primary);
-    text-align: center;
-    width: 100%;
     font-family: var(--font-display);
 }
 
 .biblical-quote {
-    background: rgba(0, 180, 204, 0.08);
-    padding: 0.5rem 5%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 50%, var(--color-primary) 100%);
+    padding: var(--spacing-md) var(--spacing-lg);
     text-align: center;
-    border-bottom: 1px solid rgba(0, 180, 204, 0.15);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.biblical-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .biblical-quote p {
     margin: 0;
-    font-size: var(--font-size-xl);
-    color: var(--color-text-light);
+    font-size: var(--font-size-base);
+    color: white;
     font-style: italic;
-    max-width: 1200px;
+    max-width: var(--container-lg);
     margin: 0 auto;
-    line-height: var(--line-height-normal);
+    line-height: var(--line-height-relaxed);
     font-family: 'Iansui', var(--font-chinese);
 }
 
 .quote-reference {
     font-weight: var(--font-weight-semibold);
-    color: var(--color-primary);
-    text-align: right;
-    white-space: nowrap;
-    display: inline-block;
-    padding-left: 1rem;
+    color: var(--color-accent);
+    padding-left: var(--spacing-sm);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: var(--spacing-lg);
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--color-text);
     font-weight: var(--font-weight-medium);
-    transition: color 0.3s;
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
     font-family: var(--font-chinese);
+    position: relative;
 }
 
 .nav-links a:hover {
     color: var(--color-primary);
+    background: var(--color-background-light);
+    transform: translateY(-1px);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+    width: 80%;
 }
 
 /* Hamburger Menu Styles */

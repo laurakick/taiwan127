@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台灣127寄養橋樑協會 - 給每個孩子有一個充滿愛的家</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>台灣127寄養橋樑協會 - 給每個孩子有一個充滿愛的家</title>      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/modern-layout.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="components/theme.css">
     <style>
@@ -70,135 +70,165 @@
 </head>
 <body>    <!-- Header -->
     <header></header>
-    <header-float style="position:fixed"></header-float>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>寄養的孩子能有充滿愛的家庭來照顧他們</h1>
-        <p>我們的異象是為每個需要寄養的孩子提供一個充滿愛的寄養家庭</p>
-        <a href="join-us.html" class="cta-button">加入我們</a>
-        <a href="assets/What does the Bible say about orphans.pdf" class="cta-button">聖經怎麼說？</a>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="section-container">
-        <h2>我們的使命</h2>
-        <div class="grid-2">
-            <div>
-                <h3>台灣的需求</h3>
-                <p>台灣有超過 4,300 名孩子由政府安置，其中大部分住在兒童之家，僅約 1,500 名孩子住在寄養家庭。研究顯示，生活在健康家庭環境中的孩子更快樂，且更容易融入社會。</p>
-                <br>
-                <h3>我們的使命</h3>
-                <p>激勵基督徒接受寄養父母培訓，鼓勵他們踏上寄養之旅，並提供資源協助教會如何成為寄養家庭的支持。</p>
-            </div>
-            <div>
-                <div class="stats-box">
-                    <h3>4,300+</h3>
-                    <p>需要政府安置的孩子</p>
-                </div>
-                <br>
-                <div class="stats-box">
-                    <h3>1,500</h3>
-                    <p>目前在寄養家庭的孩子</p>
-                </div>
+    <header-float style="position:fixed"></header-float>    <!-- Hero Section -->
+    <section class="modern-hero">
+        <div class="container">
+            <h1>給每個孩子有一個充滿愛的家</h1>
+            <p class="subtitle">我們的異象是為每個需要寄養的孩子提供一個充滿愛的寄養家庭</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="join-us.html" class="btn-modern">
+                    <i class="fas fa-heart"></i>
+                    加入我們
+                </a>
+                <a href="assets/What does the Bible say about orphans.pdf" class="btn-modern secondary">
+                    <i class="fas fa-book"></i>
+                    聖經怎麼說？
+                </a>
             </div>
         </div>
+    </section>    <!-- Mission Section -->
+    <section class="modern-section alternate">
+        <div class="container">
+            <div class="section-header">
+                <h2>我們的使命</h2>
+                <p>為台灣的孩子建立充滿愛的寄養家庭網絡</p>
+            </div>
+            
+            <div class="feature-section">
+                <div class="feature-content">
+                    <h3>台灣的需求</h3>
+                    <p>台灣有超過 4,300 名孩子由政府安置，其中大部分住在兒童之家，僅約 1,500 名孩子住在寄養家庭。研究顯示，生活在健康家庭環境中的孩子更快樂，且更容易融入社會。</p>
+                    
+                    <h3 style="margin-top: 2rem;">我們的使命</h3>
+                    <p>激勵基督徒接受寄養父母培訓，鼓勵他們踏上寄養之旅，並提供資源協助教會如何成為寄養家庭的支持。</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">4,300+</span>
+                        <span class="stat-label">需要政府安置的孩子</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1,500</span>
+                        <span class="stat-label">目前在寄養家庭的孩子</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2,800+</span>
+                        <span class="stat-label">住在兒童之家的孩子</span>
+                    </div>
+                </div>
+            </div>        </div>
     </section>
 
     <!-- Facts Section -->
-    <section class="section-light">
-        <div class="section-container">
-            <h2>你可知道...</h2>
-            <div class="grid-3">
-                <div class="card text-center">
-                    <div class="icon-large">
-                        <i class="fas fa-home"></i>
+    <section class="modern-section alternate">
+        <div class="container">
+            <div class="section-header">
+                <h2>你可知道...</h2>
+                <p>寄養家庭對孩子成長的重要性</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="modern-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-home" style="font-size: 3rem; color: var(--color-primary);"></i>
                     </div>
                     <h3>家庭短缺</h3>
                     <p>進入寄養家庭的孩子人數多於已準備敞開心扉的寄養家庭。</p>
                 </div>
-                <div class="card text-center">
-                    <div class="icon-large">
-                        <i class="fas fa-child"></i>
+                <div class="modern-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-child" style="font-size: 3rem; color: var(--color-primary);"></i>
                     </div>
                     <h3>孩子的需要</h3>
                     <p>每天都有兒童被帶離親生家庭安置，缺乏愛心寄養家庭時，他們被迫在學校或社區等不熟悉環境中生活，造成更多焦慮與適應困難。</p>
                 </div>
-                <div class="card text-center">
-                    <div class="icon-large">
-                        <i class="fas fa-church"></i>
+                <div class="modern-card">                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-church" style="font-size: 3rem; color: var(--color-primary);"></i>
                     </div>
                     <h3>教會的呼召</h3>
                     <p>教會處於獨特的地位，被呼召來滿足此需求。我們共同努力，爭取有家庭等候名單，而非等待安置的孩子等候名單。</p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="hero">
-        <h2>事實支持</h2>
-        <p>孩子在寄養家庭成長比在機構成長時，在人際關係與適應社會文化上更具優勢。</p>
-        <p>2017年聯合國兒童權利公約委員會審議，建議台灣擴大寄養制度，減少機構照護。</p>
-        <a href="share.html" class="cta-button">閱讀真實故事</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section-container">
-        <h2>聯絡我們</h2>
-        <div class="grid-2">
-            <div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>地址</h4>
-                        <p>高雄市橋頭區三民路168號</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>電話</h4>
-                        <p>0972-379-800</p>
-                    </div>
-                </div>
-                <div class="contact-item">                <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>電子郵件</h4>
-                        <p>taiwan127fb@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>服務時間</h4>
-                        <p>週一至週五: 9:00 AM - 5:00 PM</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <form>
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">電子郵件</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">電話</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">訊息</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">送出訊息</button>
-                </form>
+    </section>    <!-- Call to Action Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial">
+                <h2 style="color: white; margin-bottom: 2rem;">事實支持</h2>
+                <p class="testimonial-text">孩子在寄養家庭成長比在機構成長時，在人際關係與適應社會文化上更具優勢。</p>
+                <p class="testimonial-text">2017年聯合國兒童權利公約委員會審議，建議台灣擴大寄養制度，減少機構照護。</p>
+                <a href="share.html" class="btn-modern" style="margin-top: 2rem;">
+                    <i class="fas fa-book-open"></i>
+                    閱讀真實故事
+                </a>
             </div>
         </div>
-    </section>    <!-- Footer -->
+    </section>    <!-- Contact Section -->
+    <section class="modern-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>聯絡我們</h2>
+                <p>有任何問題或想了解更多，請隨時與我們聯繫</p>
+            </div>
+            
+            <div class="feature-section">
+                <div class="feature-content">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>地址</h4>
+                            <p>高雄市橋頭區三民路168號</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>電話</h4>
+                            <p>0972-379-800</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>電子郵件</h4>
+                            <p>taiwan127fb@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>服務時間</h4>
+                            <p>週一至週五: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>                <div class="modern-card">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">電子郵件</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">電話</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">訊息</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-modern" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            送出訊息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section><!-- Footer -->
     <footer></footer>
 
     <script src="components/components.js"></script>

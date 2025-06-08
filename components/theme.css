@@ -2,51 +2,72 @@
 .theme-switch {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: var(--spacing-xs);
     cursor: pointer;
-    font-size: 1.1rem;
-    color: #00bcd4;
+    font-size: var(--font-size-base);
+    color: var(--color-primary);
     background: none;
-    border: none;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
     outline: none;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
+    font-weight: var(--font-weight-medium);
+}
+
+.theme-switch:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
 }
 
 .theme-switch .fa-moon, .theme-switch .fa-sun {
-    font-size: 1.2rem;
+    font-size: var(--font-size-lg);
 }
 
 .theme-switch.active {
-    color: #e67e22;
+    background: var(--color-primary);
+    color: white;
 }
 
 /* Dark Theme Styles */
 body.dark-theme {
-    background: #181a1b;
-    color: #e0e0e0;
+    background: var(--color-background-dark);
+    color: var(--color-text-white);
 }
 
 body.dark-theme header, 
 body.dark-theme footer {
-    background: #23272a;
+    background: var(--color-background-section);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .modern-card {
+    background: var(--color-background-section);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-white);
+}
+
+body.dark-theme .modern-section.alternate {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Navigation styles for dark theme */
 body.dark-theme .logo-text {
-    color: #e0e0e0;
+    color: var(--color-text-white);
 }
 
 body.dark-theme .nav-links a {
-    color: #e0e0e0;
+    color: var(--color-text-white);
 }
 
 body.dark-theme .nav-links a:hover {
-    color: #e67e22;
+    color: var(--color-secondary);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-theme .biblical-quote {
-    background: rgba(230, 126, 34, 0.05);
-    border-bottom-color: rgba(230, 126, 34, 0.1);
+    background: linear-gradient(135deg, var(--color-background-section) 0%, var(--color-background-dark) 100%);
 }
 
 body.dark-theme .biblical-quote p {
