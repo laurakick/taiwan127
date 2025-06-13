@@ -18,10 +18,24 @@
             transition: transform 0.3s, border-color 0.3s;
             border: 2px solid transparent;
         }
-        
-        .join-card:hover {
+          .join-card:hover {
             transform: translateY(-5px);
             border-color: var(--color-primary);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            padding: 60px 5%;
+            text-align: center;
+            border-radius: 15px;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            font-family: var(--font-display);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 1rem;
         }
         
 
@@ -92,30 +106,26 @@
                 <a href="contact.html" class="action-button">聯繫我們</a>
             </div>        </div>
     </section>    <!-- Donation Support Section -->
-    <section class="section-dark">
-        <div class="section-container text-center">            <h2 style="color: var(--color-primary); margin-bottom: 2rem;">支持我們的事工</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <p style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: 2rem;">
-                    我們沒有來自政府的任何財務資助；我們憑信心完成神給我們的使命及異象。
-                </p>
-                
-                <div style="background-color: rgba(255,255,255,0.1); padding: 2rem; border-radius: 12px; margin-bottom: 2rem;">
-                    <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">
-                        <i class="fas fa-hand-holding-heart" style="margin-right: 0.5rem; color: var(--color-primary);"></i>
-                        我們的捐款帳號
-                    </h3>
-                    <div style="background-color: white; padding: 1.5rem; border-radius: 8px; color: #333;">
-                        <p style="margin: 0; font-size: 1.1rem;"><strong>郵政帳號：</strong>0101481 0666127</p>
-                        <p style="margin: 0.8rem 0 0 0; font-size: 1.1rem;"><strong>戶名：</strong>台灣127寄養橋樑協會歐文忠</p>
-                    </div>
+    <section class="section-container">
+        <div class="cta-section">
+            <h2>支持我們的事工</h2>
+            <p>我們沒有來自政府的任何財務資助；我們憑信心完成神給我們的使命及異象。</p>
+            
+            <div style="background-color: rgba(255,255,255,0.9); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 600px;">
+                <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">
+                    <i class="fas fa-hand-holding-heart" style="margin-right: 0.5rem;"></i>
+                    我們的捐款帳號
+                </h3>
+                <div style="background-color: rgba(255,255,255,0.3); padding: 1.5rem; border-radius: 8px; color: #333;">
+                    <p style="margin: 0; font-size: 1.1rem;"><strong>郵政帳號：</strong>0101481 0666127</p>
+                    <p style="margin: 0.8rem 0 0 0; font-size: 1.1rem;"><strong>戶名：</strong>台灣127寄養橋樑協會歐文忠</p>
                 </div>
-                
-                <p style="color: #f0f0f0;">
-                    您的每一份奉獻都將直接用於支持寄養家庭事工，幫助更多孩子找到充滿愛的家庭。
-                </p>
             </div>
+            
+            <p>您的每一份奉獻都將直接用於支持寄養家庭事工，幫助更多孩子找到充滿愛的家庭。</p>
         </div>
-    </section>    <footer></footer>
+    </section>
+       <footer></footer>
 
     <script src="components/components.js"></script>
 </body>
