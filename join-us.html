@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加入我們 - 台灣127寄養橋樑協會</title>    
+    <title>加入我們 - 台灣127寄養橋樑協會</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/common.css">
@@ -18,11 +19,12 @@
             transition: transform 0.3s, border-color 0.3s;
             border: 2px solid transparent;
         }
-          .join-card:hover {
+
+        .join-card:hover {
             transform: translateY(-5px);
             border-color: var(--color-primary);
         }
-        
+
         .cta-section {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
             color: white;
@@ -30,18 +32,17 @@
             text-align: center;
             border-radius: 15px;
         }
-        
+
         .cta-section h2 {
             color: white;
             font-family: var(--font-display);
             font-weight: var(--font-weight-bold);
             margin-bottom: 1rem;
         }
-        
-
     </style>
 </head>
-<body>    <!-- Header -->
+
+<body> <!-- Header -->
     <header></header>
     <header-float style="position:fixed"></header-float>
 
@@ -60,16 +61,17 @@
                 <p>為協會及寄養家庭代禱，用禱告托住這個事工</p>
                 <a href="assets/台灣127禱告指南.pdf" class="action-button">獲取禱告指南</a>
             </div>
-            
+
             <div class="join-card">
                 <div class="icon-large">
                     <i class="fas fa-home"></i>
                 </div>
                 <h3>成為寄養家庭</h3>
                 <p>開放您的家，成為孩子生命中的祝福</p>
-                <a href="https://premium.parenting.com.tw/article/5095856" class="action-button" target="_blank">了解申請流程</a>
+                <a href="https://premium.parenting.com.tw/article/5095856" class="action-button"
+                    target="_blank">了解申請流程</a>
             </div>
-            
+
             <div class="join-card">
                 <div class="icon-large">
                     <i class="fas fa-hands-helping"></i>
@@ -78,7 +80,7 @@
                 <p>陪伴並支持寄養家庭，成為他們的後盾</p>
                 <a href="contact.html" class="action-button">聯繫我們</a>
             </div>
-            
+
             <div class="join-card">
                 <div class="icon-large">
                     <i class="fas fa-laptop-code"></i>
@@ -87,16 +89,16 @@
                 <p>提供網站架設、資源翻譯、影片製作等專業技能</p>
                 <a href="contact.html" class="action-button">志工報名</a>
             </div>
-            
+
             <div class="join-card">
                 <div class="icon-large">
                     <i class="fas fa-donate"></i>
                 </div>
                 <h3>奉獻支持</h3>
                 <p>您的奉獻將幫助更多孩子找到愛的家</p>
-                <a href="contact.html" class="action-button">奉獻方式</a>
+                <a href="#link-donation" class="action-button">奉獻方式</a>
             </div>
-            
+
             <div class="join-card">
                 <div class="icon-large">
                     <i class="fas fa-lightbulb"></i>
@@ -104,14 +106,20 @@
                 <h3>提出建議</h3>
                 <p>分享您的想法，讓我們的服務更完善</p>
                 <a href="contact.html" class="action-button">聯繫我們</a>
-            </div>        </div>
-    </section>    <!-- Donation Support Section -->
-    <section class="section-container">
+            </div>
+
+        </div>
+
+    </section> <!-- Donation Support Section -->
+   <div id="link-donation" style="position:relative; top:-180px;background-color: red;" ></div>
+
+    <section class="section-container" id="donation-section">
         <div class="cta-section">
             <h2>支持我們的事工</h2>
             <p>我們沒有來自政府的任何財務資助；我們憑信心完成神給我們的使命及異象。</p>
-            
-            <div style="background-color: rgba(255,255,255,0.9); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 600px;">
+
+            <div
+                style="background-color: rgba(255,255,255,0.9); padding: 2rem; border-radius: 12px; margin: 2rem auto; max-width: 600px;">
                 <h3 style="color: var(--color-primary); margin-bottom: 1.5rem;">
                     <i class="fas fa-hand-holding-heart" style="margin-right: 0.5rem;"></i>
                     我們的捐款帳號
@@ -121,12 +129,13 @@
                     <p style="margin: 0.8rem 0 0 0; font-size: 1.1rem;"><strong>戶名：</strong>台灣127寄養橋樑協會歐文忠</p>
                 </div>
             </div>
-            
+
             <p>您的每一份奉獻都將直接用於支持寄養家庭事工，幫助更多孩子找到充滿愛的家庭。</p>
         </div>
     </section>
-       <footer></footer>
+    <footer></footer>
 
     <script src="components/components.js"></script>
 </body>
+
 </html>

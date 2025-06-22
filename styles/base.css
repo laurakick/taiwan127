@@ -11,6 +11,10 @@ Base Styles - Reset and Core Body Styles
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-primary);
     line-height: var(--line-height-relaxed);
