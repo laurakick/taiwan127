@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>分享 - 台灣127寄養橋樑協會</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="components/theme.css">
+    <link rel="stylesheet" href="styles/sci-fi-effects.css">
     <style>
         /* Page specific styles */
         .featured-story {
@@ -133,16 +133,40 @@
 </head>
 <body>    <!-- Header -->
     <header></header>
-    <header-float style="position:fixed"></header-float>
-
-    <!-- Page Header -->
+    <header-float style="position:fixed"></header-float>    <!-- Page Header -->
     <section class="page-header">
+        <!-- Page Header FX -->
+        <div class="hud-grid"></div>
+        <div class="hud-scanner"></div>
+        
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="tech-float" style="top: 15%; left: 10%;">SHARE_STORIES</div>
+        <div class="tech-float" style="top: 15%; right: 10%;">LOVE_WITNESS</div>
+        <div class="data-stream stream-1"></div>
+        <div class="data-stream stream-2"></div>
+        
         <h1>愛的故事</h1>
         <p>見證分享 - 每個故事都是愛的延續</p>
-    </section>
-
-    <!-- Stories Section -->
+    </section>    <!-- Stories Section -->
     <section class="stories-section">
+        <!-- Section FX -->
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="mission-hex"></div>
+        <div class="tech-float" style="top: 10%; right: 5%;">STORY_NET</div>
+        <div class="tech-float" style="bottom: 10%; left: 5%;">HEART_DATA</div>
+        
         <!-- Featured Story -->
         <div class="featured-story">
             <h2>高雄某中學生的寄養故事</h2>
@@ -221,10 +245,14 @@
                     <a href="#" class="read-more">閱讀全文 <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div>
-
-        <!-- Photo Gallery -->
+        </div>        <!-- Photo Gallery -->
         <div class="photo-gallery">
+            <!-- Gallery FX -->
+            <div class="facts-grid-overlay"></div>
+            <div class="facts-particle" style="left: 15%; animation-delay: 0s;"></div>
+            <div class="facts-particle" style="left: 45%; animation-delay: 2s;"></div>
+            <div class="facts-particle" style="left: 75%; animation-delay: 4s;"></div>
+            
             <h2>相片牆</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">[活動照片1]</div>
@@ -238,6 +266,12 @@
 
         <!-- Share Your Story Form -->
         <div class="share-form">
+            <!-- CTA Section FX -->
+            <div class="cta-circuit"></div>
+            <div class="cta-circuit" style="left: auto; right: 10%; transform: translateY(-50%) rotate(-45deg);"></div>
+            <div class="tech-float" style="top: 10%; left: 15%;">SHARE_PORTAL</div>
+            <div class="tech-float" style="bottom: 10%; right: 15%;">STORY_UPLOAD</div>
+            
             <h2>分享您的故事</h2>
             <p>您的經歷可能成為他人的祝福，歡迎與我們分享您的寄養故事</p>
             <br>

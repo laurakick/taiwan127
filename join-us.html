@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>加入我們 - 台灣127寄養橋樑協會</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="components/theme.css">
+    <link rel="stylesheet" href="styles/sci-fi-effects.css">
     <style>
         /* Page specific styles */
         .join-card {
@@ -44,14 +44,41 @@
 
 <body> <!-- Header -->
     <header></header>
-    <header-float style="position:fixed"></header-float>
-
-    <section class="page-header">
+    <header-float style="position:fixed"></header-float>    <section class="page-header">
+        <!-- Page Header FX -->
+        <div class="hud-grid"></div>
+        <div class="hud-scanner"></div>
+        
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="tech-float" style="top: 15%; left: 10%;">JOIN_MISSION</div>
+        <div class="tech-float" style="top: 15%; right: 10%;">UNITE_LOVE</div>
+        <div class="data-stream stream-1"></div>
+        <div class="data-stream stream-2"></div>
+        
         <h1>加入我們</h1>
         <p>多元參與途徑，一起為孩子創造愛的家園</p>
     </section>
 
     <section class="section-container">
+        <!-- Section FX -->
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="mission-hex"></div>
+        <div class="tech-float" style="top: 10%; right: 5%;">WAYS_TO_JOIN</div>
+        <div class="tech-float" style="bottom: 10%; left: 5%;">SUPPORT_NET</div>
+        <div class="facts-grid-overlay"></div>
+        
         <div class="grid-auto">
             <div class="join-card">
                 <div class="icon-large">
@@ -111,10 +138,22 @@
         </div>
 
     </section> <!-- Donation Support Section -->
-   <div id="link-donation" style="position:relative; top:-180px;background-color: red;" ></div>
-
-    <section class="section-container" id="donation-section">
+   <div id="link-donation" style="position:relative; top:-180px;background-color: red;" ></div>    <section class="section-container" id="donation-section">
+        <!-- Section FX -->
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
         <div class="cta-section">
+            <!-- CTA Section FX -->
+            <div class="cta-circuit"></div>
+            <div class="cta-circuit" style="left: auto; right: 10%; transform: translateY(-50%) rotate(-45deg);"></div>
+            <div class="tech-float" style="top: 10%; left: 15%;">DONATION_PORTAL</div>
+            <div class="tech-float" style="bottom: 10%; right: 15%;">SUPPORT_FUND</div>
+            
             <h2>支持我們的事工</h2>
             <p>我們沒有來自政府的任何財務資助；我們憑信心完成神給我們的使命及異象。</p>
 

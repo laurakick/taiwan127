@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>資源列表 - 台灣127寄養橋樑協會</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="components/theme.css">
+    <link rel="stylesheet" href="styles/sci-fi-effects.css">
     <style>
         /* Page specific styles */
         .resource-category {
@@ -70,14 +70,43 @@
 <body>
     <!-- Header -->
     <header></header>
-    <header-float style="position:fixed"></header-float>
-
-    <section class="page-header">
+    <header-float style="position:fixed"></header-float>    <section class="page-header">
+        <!-- Page Header FX -->
+        <div class="hud-grid"></div>
+        <div class="hud-scanner"></div>
+        
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="tech-float" style="top: 15%; left: 10%;">RESOURCE_DB</div>
+        <div class="tech-float" style="top: 15%; right: 10%;">DATA_ARCHIVE</div>
+        <div class="data-stream stream-1"></div>
+        <div class="data-stream stream-2"></div>
+        
         <h1>資源列表</h1>
         <p>一站式彙整實用文宣與資源</p>
     </section>
 
     <section class="section-container">
+        <!-- Section FX -->
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="facts-grid-overlay"></div>
+        <div class="facts-particle" style="left: 20%; animation-delay: 0s;"></div>
+        <div class="facts-particle" style="left: 60%; animation-delay: 2s;"></div>
+        <div class="facts-particle" style="left: 80%; animation-delay: 4s;"></div>
+        <div class="tech-float" style="top: 10%; right: 5%;">BOOK_BANK</div>
+        <div class="tech-float" style="bottom: 10%; left: 5%;">RESOURCE_NET</div>
+        
         <div class="resource-category">
             <h2>書籍資源</h2>
             <div class="grid-auto">
@@ -179,9 +208,13 @@
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div class="download-section">
+        </div>        <div class="download-section">
+            <!-- CTA Section FX -->
+            <div class="cta-circuit"></div>
+            <div class="cta-circuit" style="left: auto; right: 10%; transform: translateY(-50%) rotate(-45deg);"></div>
+            <div class="tech-float" style="top: 20%; left: 15%;">MORE_RESOURCES</div>
+            <div class="tech-float" style="bottom: 20%; right: 15%;">HELP_CENTER</div>
+            
             <h2 style="color: white;">需要更多資源？</h2>
             <p>我們持續更新各類資源，幫助您更好地參與寄養事工</p>
             <a href="contact.html" class="cta-button">聯繫我們</a>

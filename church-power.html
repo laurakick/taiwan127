@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教會的力量 - 台灣127寄養橋樑協會</title>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="components/theme.css">
+    <link rel="stylesheet" href="styles/sci-fi-effects.css">
     <style>
         /* Page specific styles */
         .church-intro {
@@ -89,14 +89,41 @@
 <body>
     <!-- Header -->
     <header></header>
-    <header-float style="position:fixed"></header-float>
-
-    <section class="page-header">
+    <header-float style="position:fixed"></header-float>    <section class="page-header">
+        <!-- Page Header FX -->
+        <div class="hud-grid"></div>
+        <div class="hud-scanner"></div>
+        
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="tech-float" style="top: 15%; left: 10%;">CHURCH_POWER</div>
+        <div class="tech-float" style="top: 15%; right: 10%;">UNITE_FAITH</div>
+        <div class="data-stream stream-1"></div>
+        <div class="data-stream stream-2"></div>
+        
         <h1>教會的力量</h1>
         <p>呼籲地方教會動員，共同推動寄養事工</p>
     </section>
 
     <section class="section-container">
+        <!-- Section FX -->
+        <div class="section-hud-corners">
+            <div class="hud-corner top-left"></div>
+            <div class="hud-corner top-right"></div>
+            <div class="hud-corner bottom-left"></div>
+            <div class="hud-corner bottom-right"></div>
+        </div>
+        
+        <div class="facts-grid-overlay"></div>
+        <div class="mission-hex"></div>
+        <div class="tech-float" style="top: 10%; right: 5%;">CHURCH_NET</div>
+        <div class="tech-float" style="bottom: 10%; left: 5%;">FAITH_POWER</div>
+        
         <div class="church-intro">
             <p>教會是神在地上的身體，擁有獨特的位置來回應社會需要。當教會團結一致，我們能為需要家庭的孩子創造奇蹟。</p>
         </div>
@@ -146,13 +173,18 @@
                     <p>組織教會寄養支持小組，提供持續的關懷網絡</p>
                 </div>
             </div>
-        </div>
-
-        <div class="cta-section">
+        </div>        <div class="cta-section">
+            <!-- CTA Section FX -->
+            <div class="cta-circuit"></div>
+            <div class="cta-circuit" style="left: auto; right: 10%; transform: translateY(-50%) rotate(-45deg);"></div>
+            <div class="tech-float" style="top: 20%; left: 15%;">ACTION_CALL</div>
+            <div class="tech-float" style="bottom: 20%; right: 15%;">UNITE_NOW</div>
+            
             <h2>讓我們一起行動</h2>
             <p>您的教會準備好成為孩子生命中的祝福了嗎？</p>
             <a href="resources.html" class="cta-button">下載教會資源包</a>
-            <a href="contact.html" class="cta-button">聯繫我們合作</a>        </div>
+            <a href="contact.html" class="cta-button">聯繫我們合作</a>
+        </div>
     </section>
 
     <footer></footer>

@@ -38,15 +38,7 @@ For legacy support, all styles are imported below to maintain compatibility.
 @import url('./components.css');
 @import url('./layout.css');
 @import url('./responsive.css');
-
-/* Hero Section */
-.hero {
-    /* ...existing code... */
-}
-
-.hero h1 {
-    /* ...existing code... */
-}
+@import url('./sci-fi-effects.css');
 
 .hero h2 {
     color: white;
