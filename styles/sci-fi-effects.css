@@ -1428,3 +1428,962 @@ footer p {
         background-size: 20px 20px;
     }
 }
+
+/* ============================================================================
+   3D TURBINE ENGINE X-RAY VIEW ANIMATION
+   ============================================================================ */
+
+/* Turbine Engine Container */
+.turbine-engine {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(50%, -50%);
+    width: 600px;
+    height: 400px;
+    perspective: 1000px;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Main Engine Body */
+.engine-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: engineRotate 20s linear infinite;
+}
+
+@keyframes engineRotate {
+    0% { transform: rotateY(0deg) rotateX(15deg); }
+    100% { transform: rotateY(360deg) rotateX(15deg); }
+}
+
+/* Engine Casing - X-ray transparent */
+.engine-casing {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    height: 50%;
+    border: 2px solid rgba(255, 179, 0, 0.4);
+    border-radius: 50px;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 179, 0, 0.05) 0%, 
+        rgba(255, 179, 0, 0.1) 30%, 
+        transparent 70%
+    );
+    transform: rotateX(0deg);
+    animation: casingPulse 4s ease-in-out infinite;
+}
+
+@keyframes casingPulse {
+    0%, 100% { 
+        border-color: rgba(255, 179, 0, 0.4);
+        box-shadow: 0 0 20px rgba(255, 179, 0, 0.2);
+    }
+    50% { 
+        border-color: rgba(255, 179, 0, 0.8);
+        box-shadow: 0 0 40px rgba(255, 179, 0, 0.4);
+    }
+}
+
+/* Turbine Blades - Multiple rotating layers */
+.turbine-stage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+}
+
+.turbine-stage-1 {
+    width: 300px;
+    height: 300px;
+    margin: -150px 0 0 -150px;
+    animation: turbineRotate1 2s linear infinite;
+}
+
+.turbine-stage-2 {
+    width: 250px;
+    height: 250px;
+    margin: -125px 0 0 -125px;
+    animation: turbineRotate2 1.5s linear infinite reverse;
+}
+
+.turbine-stage-3 {
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    animation: turbineRotate3 1s linear infinite;
+}
+
+@keyframes turbineRotate1 {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+@keyframes turbineRotate2 {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+@keyframes turbineRotate3 {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+/* Individual Turbine Blades */
+.turbine-blade {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(45deg, 
+        rgba(255, 179, 0, 0.6) 0%, 
+        rgba(255, 179, 0, 0.2) 50%, 
+        rgba(255, 179, 0, 0.6) 100%
+    );
+    border-radius: 2px;
+    transform-origin: center bottom;
+    opacity: 0.7;
+}
+
+/* Stage 1 Blades - Outer ring */
+.turbine-stage-1 .turbine-blade {
+    width: 4px;
+    height: 120px;
+    margin: -120px 0 0 -2px;
+}
+
+.turbine-stage-1 .blade-1 { transform: rotate(0deg); }
+.turbine-stage-1 .blade-2 { transform: rotate(30deg); }
+.turbine-stage-1 .blade-3 { transform: rotate(60deg); }
+.turbine-stage-1 .blade-4 { transform: rotate(90deg); }
+.turbine-stage-1 .blade-5 { transform: rotate(120deg); }
+.turbine-stage-1 .blade-6 { transform: rotate(150deg); }
+.turbine-stage-1 .blade-7 { transform: rotate(180deg); }
+.turbine-stage-1 .blade-8 { transform: rotate(210deg); }
+.turbine-stage-1 .blade-9 { transform: rotate(240deg); }
+.turbine-stage-1 .blade-10 { transform: rotate(270deg); }
+.turbine-stage-1 .blade-11 { transform: rotate(300deg); }
+.turbine-stage-1 .blade-12 { transform: rotate(330deg); }
+
+/* Stage 2 Blades - Middle ring */
+.turbine-stage-2 .turbine-blade {
+    width: 3px;
+    height: 100px;
+    margin: -100px 0 0 -1.5px;
+}
+
+.turbine-stage-2 .blade-1 { transform: rotate(0deg); }
+.turbine-stage-2 .blade-2 { transform: rotate(45deg); }
+.turbine-stage-2 .blade-3 { transform: rotate(90deg); }
+.turbine-stage-2 .blade-4 { transform: rotate(135deg); }
+.turbine-stage-2 .blade-5 { transform: rotate(180deg); }
+.turbine-stage-2 .blade-6 { transform: rotate(225deg); }
+.turbine-stage-2 .blade-7 { transform: rotate(270deg); }
+.turbine-stage-2 .blade-8 { transform: rotate(315deg); }
+
+/* Stage 3 Blades - Inner ring */
+.turbine-stage-3 .turbine-blade {
+    width: 2px;
+    height: 80px;
+    margin: -80px 0 0 -1px;
+}
+
+.turbine-stage-3 .blade-1 { transform: rotate(0deg); }
+.turbine-stage-3 .blade-2 { transform: rotate(60deg); }
+.turbine-stage-3 .blade-3 { transform: rotate(120deg); }
+.turbine-stage-3 .blade-4 { transform: rotate(180deg); }
+.turbine-stage-3 .blade-5 { transform: rotate(240deg); }
+.turbine-stage-3 .blade-6 { transform: rotate(300deg); }
+
+/* Engine Shaft - Central rotating element */
+.engine-shaft {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 80%;
+    margin: -40% 0 0 -4px;
+    background: linear-gradient(180deg, 
+        rgba(255, 179, 0, 0.8) 0%, 
+        rgba(255, 179, 0, 0.4) 50%, 
+        rgba(255, 179, 0, 0.8) 100%
+    );
+    border-radius: 4px;
+    transform-origin: center;
+    animation: shaftRotate 3s linear infinite;
+    box-shadow: 0 0 10px rgba(255, 179, 0, 0.5);
+}
+
+@keyframes shaftRotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+/* Engine Compressor Rings - X-ray view */
+.compressor-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(255, 179, 0, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: compressorPulse 6s ease-in-out infinite;
+}
+
+.compressor-ring-1 {
+    width: 350px;
+    height: 350px;
+    animation-delay: 0s;
+}
+
+.compressor-ring-2 {
+    width: 280px;
+    height: 280px;
+    animation-delay: 1s;
+}
+
+.compressor-ring-3 {
+    width: 210px;
+    height: 210px;
+    animation-delay: 2s;
+}
+
+.compressor-ring-4 {
+    width: 140px;
+    height: 140px;
+    animation-delay: 3s;
+}
+
+@keyframes compressorPulse {
+    0%, 100% { 
+        border-color: rgba(255, 179, 0, 0.2);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        border-color: rgba(255, 179, 0, 0.6);
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+}
+
+/* Exhaust Flames - Energy output */
+.exhaust-flame {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    width: 100px;
+    height: 20px;
+    margin-top: -10px;
+    background: linear-gradient(90deg, 
+        rgba(255, 179, 0, 0.8) 0%, 
+        rgba(255, 100, 0, 0.6) 50%, 
+        transparent 100%
+    );
+    border-radius: 0 20px 20px 0;
+    animation: exhaustFlicker 0.5s ease-in-out infinite alternate;
+}
+
+.exhaust-flame-2 {
+    top: 45%;
+    height: 15px;
+    margin-top: -7.5px;
+    animation-delay: 0.1s;
+}
+
+.exhaust-flame-3 {
+    top: 55%;
+    height: 15px;
+    margin-top: -7.5px;
+    animation-delay: 0.2s;
+}
+
+@keyframes exhaustFlicker {
+    0% { 
+        transform: scaleX(1);
+        opacity: 0.8;
+    }
+    100% { 
+        transform: scaleX(1.2);
+        opacity: 0.6;
+    }
+}
+
+/* Engine Diagnostics Display */
+.engine-diagnostics {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: rgba(255, 179, 0, 0.6);
+    text-align: right;
+    line-height: 1.4;
+    animation: diagnosticsUpdate 3s ease-in-out infinite;
+}
+
+@keyframes diagnosticsUpdate {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Engine Power Core - Central glowing element */
+.power-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    background: radial-gradient(circle, 
+        rgba(255, 179, 0, 1) 0%, 
+        rgba(255, 179, 0, 0.5) 50%, 
+        transparent 100%
+    );
+    border-radius: 50%;
+    animation: coreEnergy 2s ease-in-out infinite;
+    box-shadow: 0 0 30px rgba(255, 179, 0, 0.8);
+}
+
+@keyframes coreEnergy {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(255, 179, 0, 0.8);
+    }
+    50% { 
+        transform: scale(1.2);
+        box-shadow: 0 0 50px rgba(255, 179, 0, 1);
+    }
+}
+
+/* Wireframe Overlay - X-ray effect */
+.wireframe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(255, 179, 0, 0.1) 25%, rgba(255, 179, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 179, 0, 0.1) 75%, rgba(255, 179, 0, 0.1) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(255, 179, 0, 0.1) 25%, rgba(255, 179, 0, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 179, 0, 0.1) 75%, rgba(255, 179, 0, 0.1) 76%, transparent 77%, transparent);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.3;
+    animation: wireframeShift 10s linear infinite;
+}
+
+@keyframes wireframeShift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, 20px); }
+}
+
+/* Apply turbine engine to hero section */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, 
+        rgba(255, 179, 0, 0.03) 0%, 
+        transparent 60%
+    );
+    z-index: 0;
+}
+
+/* Hero Content Layering */
+.hero .vision-text,
+.hero h1,
+.hero .cta-button {
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.hero .hud-frame,
+.hero .hud-grid,
+.hero .hud-scanner,
+.hero .hud-circle,
+.hero .tech-pattern,
+.hero .data-block,
+.hero .hologram-display,
+.hero .data-stream,
+.hero .hex-pattern,
+.hero .glitch-element,
+.hero .orbit-ring,
+.hero .laser-grid,
+.hero .pulse-radar,
+.hero .binary-rain {
+    z-index: 5;
+}
+
+/* ============================================================================
+   3D ROTATING EARTH WITH THREE.JS
+   ============================================================================ */
+
+/* Earth Container */
+.rotating-earth {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+}
+
+/* Three.js Canvas */
+#earth-canvas {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 60px rgba(0, 100, 200, 0.4),
+        0 0 120px rgba(135, 206, 235, 0.2);
+}
+
+/* Earth Info Display */
+.earth-info {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: rgba(255, 179, 0, 0.7);
+    text-align: center;
+    line-height: 1.4;
+    animation: earthInfoGlow 3s ease-in-out infinite;
+}
+
+@keyframes earthInfoGlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Responsive Earth */
+@media (max-width: 768px) {
+    .rotating-earth {
+        width: 200px;
+        height: 200px;
+        left: 10%;
+    }
+    
+    .earth-info {
+        font-size: 8px;
+    }
+}
+
+/* Three.js Earth implementation replaces CSS animations */
+
+/* Earth Atmosphere Glow - True 3D Volumetric */
+.earth-atmosphere {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: atmosphereGlow3D 6s ease-in-out infinite;
+    z-index: 15;
+    pointer-events: none;
+    
+    background: 
+        /* Multiple atmospheric shells */
+        radial-gradient(circle at 45% 45%, 
+            transparent 48%, 
+            rgba(135, 206, 250, 0.15) 52%,
+            rgba(135, 206, 250, 0.3) 58%, 
+            rgba(100, 150, 255, 0.4) 65%, 
+            rgba(80, 120, 255, 0.3) 75%, 
+            rgba(60, 100, 255, 0.2) 85%,
+            transparent 95%
+        );
+    
+    /* Create atmospheric depth */
+    box-shadow:
+        0 0 40px rgba(135, 206, 250, 0.3),
+        0 0 80px rgba(100, 150, 255, 0.2),
+        inset 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes atmosphereGlow3D {
+    0%, 100% { 
+        opacity: 0.8; 
+        transform: scale(1) rotateY(0deg);
+        filter: blur(2px);
+    }
+    50% { 
+        opacity: 1; 
+        transform: scale(1.1) rotateY(180deg);
+        filter: blur(1px);
+    }
+}
+
+/* Earth Clouds - 3D Volumetric Effect */
+.earth-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: cloudDrift3D 18s linear infinite;
+    z-index: 6;
+    
+    background: 
+        /* Cloud formations with 3D perspective */
+        radial-gradient(ellipse 85px 32px at 18% 22%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 40%, transparent 70%),
+        radial-gradient(ellipse 65px 28px at 62% 38%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 70%),
+        radial-gradient(ellipse 45px 22px at 83% 58%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 45%, transparent 70%),
+        radial-gradient(ellipse 55px 32px at 28% 78%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    
+    /* Sphere perspective mask for clouds */
+    -webkit-mask: radial-gradient(ellipse 85% 100% at 42% 50%, 
+        black 0%, 
+        rgba(0,0,0,0.9) 35%, 
+        rgba(0,0,0,0.6) 65%, 
+        rgba(0,0,0,0.2) 85%, 
+        transparent 100%
+    );
+    mask: radial-gradient(ellipse 85% 100% at 42% 50%, 
+        black 0%, 
+        rgba(0,0,0,0.9) 35%, 
+        rgba(0,0,0,0.6) 65%, 
+        rgba(0,0,0,0.2) 85%, 
+        transparent 100%
+    );
+}
+
+@keyframes cloudDrift3D {
+    0% { 
+        transform: rotateY(0deg);
+    }
+    100% { 
+        transform: rotateY(360deg);
+    }
+}
+
+/* Earth City Lights (Night Side) */
+.earth-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        /* Major Cities */
+        radial-gradient(circle 2px at 55% 30%, rgba(255, 255, 0, 0.8) 0%, transparent 70%),
+        radial-gradient(circle 1px at 25% 35%, rgba(255, 255, 0, 0.6) 0%, transparent 70%),
+        radial-gradient(circle 1px at 30% 40%, rgba(255, 255, 0, 0.7) 0%, transparent 70%),
+        radial-gradient(circle 1px at 70% 40%, rgba(255, 255, 0, 0.6) 0%, transparent 70%),
+        radial-gradient(circle 1px at 60% 50%, rgba(255, 255, 0, 0.5) 0%, transparent 70%),
+        radial-gradient(circle 1px at 75% 70%, rgba(255, 255, 0, 0.6) 0%, transparent 70%);
+    animation: cityLights 6s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes cityLights {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.9; }
+}
+
+/* Earth Orbit Ring - True 3D Orbit */
+.earth-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
+    border: 1px solid rgba(255, 179, 0, 0.3);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: orbitRotate3D 40s linear infinite;
+    /* 3D orbital plane */
+    box-shadow: 
+        inset 0 0 20px rgba(255, 179, 0, 0.1),
+        0 0 30px rgba(255, 179, 0, 0.2);
+}
+
+@keyframes orbitRotate3D {
+    0% { 
+        transform: rotateZ(0deg) rotateX(70deg) rotateY(0deg);
+        border-color: rgba(255, 179, 0, 0.3);
+    }
+    25% {
+        border-color: rgba(255, 179, 0, 0.5);
+    }
+    50% {
+        transform: rotateZ(180deg) rotateX(70deg) rotateY(180deg);
+        border-color: rgba(255, 179, 0, 0.3);
+    }
+    75% {
+        border-color: rgba(255, 179, 0, 0.5);
+    }
+    100% { 
+        transform: rotateZ(360deg) rotateX(70deg) rotateY(360deg);
+        border-color: rgba(255, 179, 0, 0.3);
+    }
+}
+
+/* Satellites */
+.satellite {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 179, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 179, 0, 0.6);
+}
+
+.satellite-1 {
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: satellitePulse 2s ease-in-out infinite;
+}
+
+.satellite-2 {
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    animation: satellitePulse 2s ease-in-out infinite 1s;
+}
+
+@keyframes satellitePulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 179, 0, 0.6);
+    }
+    50% { 
+        transform: scale(1.5);
+        box-shadow: 0 0 20px rgba(255, 179, 0, 1);
+    }
+}
+
+/* Earth Data Streams */
+.earth-data-stream {
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: linear-gradient(180deg, 
+        rgba(255, 179, 0, 0.8) 0%, 
+        rgba(255, 179, 0, 0.4) 50%, 
+        transparent 100%
+    );
+    animation: earthDataFlow 3s ease-in-out infinite;
+}
+
+.earth-stream-1 {
+    top: -150px;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.earth-stream-2 {
+    top: -150px;
+    right: 30%;
+    animation-delay: 1s;
+}
+
+.earth-stream-3 {
+    bottom: -150px;
+    left: 50%;
+    transform: rotate(180deg);
+    animation-delay: 2s;
+}
+
+@keyframes earthDataFlow {
+    0% { opacity: 0; transform: translateY(0) scale(1); }
+    50% { opacity: 1; transform: translateY(20px) scale(1.1); }
+    100% { opacity: 0; transform: translateY(40px) scale(1); }
+}
+
+/* Earth HUD Display */
+.earth-hud {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    right: -50px;
+    bottom: -50px;
+    pointer-events: none;
+}
+
+/* Earth Scan Lines */
+.earth-scan-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 179, 0, 0.6) 50%, 
+        transparent
+    );
+    animation: earthScan 4s linear infinite;
+}
+
+.earth-scan-line-1 {
+    top: 25%;
+    animation-delay: 0s;
+}
+
+.earth-scan-line-2 {
+    top: 50%;
+    animation-delay: 1s;
+}
+
+.earth-scan-line-3 {
+    top: 75%;
+    animation-delay: 2s;
+}
+
+@keyframes earthScan {
+    0% { opacity: 0; transform: scaleX(0); }
+    50% { opacity: 1; transform: scaleX(1); }
+    100% { opacity: 0; transform: scaleX(0); }
+}
+
+/* Earth Info Display */
+.earth-info {
+    position: absolute;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: rgba(255, 179, 0, 0.7);
+    text-align: center;
+    line-height: 1.4;
+    animation: earthInfoGlow 3s ease-in-out infinite;
+}
+
+@keyframes earthInfoGlow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+}
+
+/* Earth Coordinate Grid - 3D Sphere Grid */
+.earth-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        /* Latitude lines - curved to follow sphere */
+        radial-gradient(ellipse 300px 2px at 50% 25%, rgba(255, 179, 0, 0.15) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        radial-gradient(ellipse 320px 2px at 50% 50%, rgba(255, 179, 0, 0.2) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        radial-gradient(ellipse 300px 2px at 50% 75%, rgba(255, 179, 0, 0.15) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        /* Longitude lines - curved meridians */
+        radial-gradient(ellipse 2px 300px at 25% 50%, rgba(255, 179, 0, 0.12) 0%, rgba(255, 179, 0, 0.08) 50%, transparent 100%),
+        radial-gradient(ellipse 2px 320px at 50% 50%, rgba(255, 179, 0, 0.18) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        radial-gradient(ellipse 2px 300px at 75% 50%, rgba(255, 179, 0, 0.12) 0%, rgba(255, 179, 0, 0.08) 50%, transparent 100%);
+    opacity: 0.5;
+    animation: gridPulse3D 8s ease-in-out infinite;
+    /* 3D grid rotation */
+    transform-style: preserve-3d;
+    mix-blend-mode: overlay;
+}
+
+@keyframes gridPulse3D {
+    0%, 100% { 
+        opacity: 0.5; 
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+        opacity: 0.7;
+        transform: rotateY(90deg) rotateZ(2deg);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+    75% {
+        opacity: 0.7;
+        transform: rotateY(270deg) rotateZ(-2deg);
+    }
+}
+
+/* Additional 3D Sphere Effects */
+
+/* Create shadow/dark side of the planet */
+.earth-terminator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        /* Day/night terminator line */
+        linear-gradient(135deg, 
+            transparent 45%,
+            rgba(0, 0, 0, 0.2) 48%,
+            rgba(0, 0, 0, 0.6) 52%,
+            rgba(0, 0, 0, 0.8) 65%,
+            rgba(0, 0, 0, 0.9) 100%
+        );
+    z-index: 8;
+    animation: terminatorShift 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes terminatorShift {
+    0% { 
+        transform: rotateY(0deg);
+    }
+    100% { 
+        transform: rotateY(360deg);
+    }
+}
+
+/* Sunlight reflection on sphere */
+.earth-sunlight {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 40%;
+    height: 30%;
+    border-radius: 50%;
+    background: 
+        radial-gradient(ellipse at center, 
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 255, 255, 0.15) 30%,
+            rgba(255, 255, 255, 0.05) 60%,
+            transparent 100%
+        );
+    z-index: 12;
+    animation: sunlightShimmer 8s ease-in-out infinite;
+    pointer-events: none;
+    filter: blur(3px);
+}
+
+@keyframes sunlightShimmer {
+    0%, 100% { 
+        opacity: 0.6;
+        transform: scale(1) translate(0, 0);
+    }
+    50% { 
+        opacity: 0.9;
+        transform: scale(1.2) translate(10px, 5px);
+    }
+}
+
+/* Enhance grid to follow sphere curvature better */
+.earth-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: 
+        /* Latitude lines - curved to follow sphere */
+        radial-gradient(ellipse 300px 2px at 50% 25%, rgba(255, 179, 0, 0.15) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        radial-gradient(ellipse 320px 2px at 50% 50%, rgba(255, 179, 0, 0.2) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        radial-gradient(ellipse 300px 2px at 50% 75%, rgba(255, 179, 0, 0.15) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        /* Longitude lines - curved meridians */
+        radial-gradient(ellipse 2px 300px at 25% 50%, rgba(255, 179, 0, 0.12) 0%, rgba(255, 179, 0, 0.08) 50%, transparent 100%),
+        radial-gradient(ellipse 2px 320px at 50% 50%, rgba(255, 179, 0, 0.18) 0%, rgba(255, 179, 0, 0.1) 50%, transparent 100%),
+        radial-gradient(ellipse 2px 300px at 75% 50%, rgba(255, 179, 0, 0.12) 0%, rgba(255, 179, 0, 0.08) 50%, transparent 100%);
+    opacity: 0.5;
+    animation: gridPulse3D 8s ease-in-out infinite;
+    /* 3D grid rotation */
+    transform-style: preserve-3d;
+    mix-blend-mode: overlay;
+}
+
+@keyframes gridPulse3D {
+    0%, 100% { 
+        opacity: 0.5; 
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+        opacity: 0.7;
+        transform: rotateY(90deg) rotateZ(2deg);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: rotateY(180deg) rotateZ(0deg);
+    }
+    75% {
+        opacity: 0.7;
+        transform: rotateY(270deg) rotateZ(-2deg);
+    }
+}
+
+/* Responsive Earth */
+@media (max-width: 768px) {
+    .rotating-earth {
+        width: 200px;
+        height: 200px;
+        left: 10%;
+    }
+    
+    .earth-orbit {
+        width: 280px;
+        height: 280px;
+        margin: -140px 0 0 -140px;
+    }
+    
+    .earth-info {
+        font-size: 8px;
+    }
+    
+    .earth-data-stream {
+        height: 100px;
+    }
+    
+    .earth-stream-1 {
+        top: -100px;
+    }
+    
+    .earth-stream-2 {
+        top: -100px;
+    }
+    
+    .earth-stream-3 {
+        bottom: -100px;
+    }
+    
+    /* Turbine Engine responsive */
+    .turbine-engine {
+        width: 300px;
+        height: 200px;
+        right: 10%;
+        opacity: 0.2;
+    }
+    
+    .engine-diagnostics {
+        font-size: 8px;
+    }
+    
+    .exhaust-flame {
+        width: 40px;
+        right: -20px;
+    }
+}
+
+/* Lens Flare Canvas Overlay */
+#star-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
