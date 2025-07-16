@@ -1084,6 +1084,7 @@
         </div>
     </section>    <!-- Footer -->
     <footer></footer>    <script src="components/components.js"></script>
+      <script src="galaxy.js"></script>
       <!-- Three.js Double Star System Script -->
     <script>
         // Three.js Double Star System
@@ -1631,6 +1632,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // Delay to ensure Three.js and plugins are loaded
             setTimeout(function() {
+                initGalaxy();
                 initDoubleStarSystem();
                 initStarLensFlare();
             }, 100);
