@@ -6,7 +6,8 @@ Reusable Components - Buttons, Cards, Forms, Icons
 
 /* Page Headers */
 .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.8) 0%, rgba(var(--color-primary-dark-rgb), 0.8) 100%), 
+                url('../assets/illustrations/picnic.png') center/cover no-repeat;
     color: white;
     padding: 50px 5% 60px;
     text-align: center;
@@ -26,7 +27,8 @@ Reusable Components - Buttons, Cards, Forms, Icons
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.8) 0%, rgba(var(--color-primary-dark-rgb), 0.8) 100%), 
+                url('../assets/illustrations/picnic.png') center/cover no-repeat;
     color: white;
     padding: 70px 5% 80px;
     text-align: center;
