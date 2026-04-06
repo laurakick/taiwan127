@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "liveServer.settings.https": {
+        "enable": true,
+        "cert": "E:/Projects/taiwan127/cert.pem",
+        "key": "E:/Projects/taiwan127/key.pem",
+        "passphrase": ""
+    }
 }
